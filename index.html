@@ -17,7 +17,9 @@
         }
         .container {
             display: flex;
+            flex-direction: row;
             width: 90%;
+            max-width: 1200px;
             background-color: #fff;
             border: 5px solid #8B0000; /* Dark red border */
             box-sizing: border-box;
@@ -84,6 +86,45 @@
         .specialty p.extra {
             font-size: 0.9em;
             color: #8B0000; /* Dark red color */
+        }
+
+        /* Responsiveness */
+        @media (max-width: 1024px) {
+            .specialty {
+                width: 31%; /* Three items per row */
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .left, .right {
+                width: 100%;
+            }
+            .specialties {
+                justify-content: center;
+            }
+            .specialty {
+                width: 45%; /* Two items per row */
+            }
+        }
+        @media (max-width: 480px) {
+            .left h2 {
+                font-size: 1.5em;
+            }
+            .left .price {
+                font-size: 2.5em;
+            }
+            .right .top-section h2 {
+                font-size: 1.2em;
+            }
+            .right .top-section h3 {
+                font-size: 2em;
+            }
+            .specialty {
+                width: 100%; /* One item per row */
+            }
         }
     </style>
 </head>
