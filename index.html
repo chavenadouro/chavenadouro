@@ -7,31 +7,36 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-color: #f0f0f0;
         }
         .container {
+            display: flex;
             width: 90%;
             background-color: #fff;
-            padding: 20px;
             border: 5px solid #8B0000; /* Dark red border */
-            display: flex;
-            justify-content: space-between;
+            box-sizing: border-box;
         }
         .left {
             width: 30%;
-            text-align: center;
             background-color: #f0f0f0;
-            padding: 10px;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .left h2 {
             font-size: 2em;
             color: #00008B; /* Dark blue color */
+            margin: 0;
         }
         .left .price {
             font-size: 3em;
@@ -39,28 +44,30 @@
             margin-top: 20px;
         }
         .right {
-            width: 65%;
+            width: 70%;
             padding: 20px;
+            box-sizing: border-box;
         }
-        .right h2 {
+        .right .top-section {
+            margin-bottom: 20px;
+        }
+        .right .top-section h2 {
             font-size: 1.5em;
             color: #00008B; /* Dark blue color */
-            text-align: left;
+            margin: 0;
         }
-        .right h3 {
+        .right .top-section h3 {
             font-size: 2.5em;
             color: #000;
-            text-align: left;
-            margin-bottom: 10px;
+            margin: 10px 0;
         }
         .right .specialties {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-top: 20px;
         }
         .specialty {
-            width: 30%;
+            width: 23%; /* Four items per row */
             text-align: center;
             margin-bottom: 20px;
         }
@@ -90,10 +97,11 @@
             <div class="price">6,40€</div>
         </div>
         <div class="right">
-            <h2>ESPECIALIDADE DO DIA:</h2>
-            <h3>FRANGO ESTUFADO C/ ERVILHAS</h3>
-            <p>Outras especialidades incluídas no menu:</p>
-            <hr>
+            <div class="top-section">
+                <h2>ESPECIALIDADE DO DIA:</h2>
+                <h3>FRANGO ESTUFADO C/ ERVILHAS</h3>
+                <p>Outras especialidades incluídas no menu:</p>
+            </div>
             <div class="specialties">
                 <div class="specialty">
                     <img src="https://via.placeholder.com/150" alt="Filetes de Pescada">
