@@ -7,93 +7,123 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #000;
-            text-align: center;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            border: 10px solid #8B0000; /* Dark Red border */
+            width: 90%;
             background-color: #fff;
+            padding: 20px;
+            border: 5px solid #8B0000; /* Dark red border */
+            display: flex;
+            justify-content: space-between;
         }
-        h1, h2, h3, p {
-            margin: 10px 0;
+        .left {
+            width: 30%;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 10px;
         }
-        h1 {
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        h2 {
+        .left h2 {
             font-size: 2em;
-            font-weight: bold;
+            color: #00008B; /* Dark blue color */
         }
-        h3 {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .price {
-            font-size: 2em;
-            font-weight: bold;
-            color: #00008B; /* Dark Blue color */
-        }
-        .item {
-            margin: 20px 0;
-        }
-        .sub-item {
-            font-style: italic;
-            font-size: 0.9em;
-        }
-        .footer {
-            font-size: 1.2em;
-            font-weight: bold;
+        .left .price {
+            font-size: 3em;
+            color: #00008B;
             margin-top: 20px;
+        }
+        .right {
+            width: 65%;
+            padding: 20px;
+        }
+        .right h2 {
+            font-size: 1.5em;
+            color: #00008B; /* Dark blue color */
+            text-align: left;
+        }
+        .right h3 {
+            font-size: 2.5em;
+            color: #000;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .right .specialties {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .specialty {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .specialty img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .specialty p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #000;
+        }
+        .specialty p.extra {
+            font-size: 0.9em;
+            color: #8B0000; /* Dark red color */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item">
-            <h1>FILETES DE PESCADA</h1>
-            <p class="sub-item">Filets de Poisson / Fish Fillets</p>
+        <div class="left">
+            <h2>PRATO<br>+</h2>
+            <h2>SOPA<br>+</h2>
+            <h2>1 BEBIDA<br>+</h2>
+            <h2>1 PÃO</h2>
+            <div class="price">6,40€</div>
         </div>
-        <div class="item">
-            <h1>COSTELETAS GRELHADAS</h1>
-            <p class="sub-item">Côtelette de porc / Pork Chop</p>
-        </div>
-        <div class="item">
-            <h1>FÊVERAS GRELHADAS</h1>
-            <p class="sub-item">Grillade de Porc / Pork Steak (Grilled leg)</p>
-        </div>
-        <div class="item">
-            <h1>ALHEIRA</h1>
-            <p class="sub-item">Saucisson fumé régionale / Regional sausage</p>
-        </div>
-        <div class="item">
-            <h1>BIFE À CASA</h1>
-            <p class="sub-item">Bifteck / Steak With Chips</p>
-        </div>
-        <div class="item">
-            <h1>BIFE DE PERU</h1>
-            <p class="sub-item">Steak De Dinde Grillé / Grilled Turkey steak</p>
-        </div>
-        <div class="item">
-            <h2>Prato + Sopa + 1 Bebida + 1 Pão</h2>
-            <p class="price">6,40€</p>
-        </div>
-        <div class="item">
-            <h1>BACALHAU À BRAGA</h1>
-            <p class="sub-item">Morue à la "Braga" / Salted Cod Braga's Style</p>
-        </div>
-        <div class="item">
-            <h2>Prato + Sopa + 1 Bebida + 1 Pão</h2>
-            <p class="price">8,90€</p>
-        </div>
-        <div class="footer">
-            <p>SOBREMESA - 1,50€</p>
+        <div class="right">
+            <h2>ESPECIALIDADE DO DIA:</h2>
+            <h3>FRANGO ESTUFADO C/ ERVILHAS</h3>
+            <p>Outras especialidades incluídas no menu:</p>
+            <hr>
+            <div class="specialties">
+                <div class="specialty">
+                    <img src="https://via.placeholder.com/150" alt="Filetes de Pescada">
+                    <p>Filetes de Pescada</p>
+                </div>
+                <div class="specialty">
+                    <img src="https://via.placeholder.com/150" alt="Alheira">
+                    <p>Alheira</p>
+                </div>
+                <div class="specialty">
+                    <img src="https://via.placeholder.com/150" alt="Feveras Grelhadas">
+                    <p>Feveras Grelhadas</p>
+                </div>
+                <div class="specialty">
+                    <img src="https://via.placeholder.com/150" alt="Bife à Casa">
+                    <p>Bife à Casa</p>
+                </div>
+                <div class="specialty">
+                    <img src="https://via.placeholder.com/150" alt="Bacalhau à Braga">
+                    <p>Bacalhau à Braga <span class="extra">(+2,50€)</span></p>
+                </div>
+                <div class="specialty">
+                    <img src="https://via.placeholder.com/150" alt="Bife de Peru">
+                    <p>Bife de Peru</p>
+                </div>
+                <div class="specialty">
+                    <img src="https://via.placeholder.com/150" alt="Costeletas Grelhadas">
+                    <p>Costeletas Grelhadas</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
