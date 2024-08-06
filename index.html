@@ -3,109 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ementa do Chávena D'Ouro</title>
+    <title>Ementa do Restaurante</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
         }
         .container {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        section {
-            background: #fff;
-            margin: 20px 0;
+            margin: 20px auto;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 10px solid #8B0000; /* Dark Red border */
+            background-color: #fff;
         }
-        h2 {
-            color: #333;
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
+        h1, h2, h3, p {
             margin: 10px 0;
         }
-        .menu-item h3 {
-            margin: 0;
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
         }
-        .menu-item p {
-            margin: 5px 0 0;
-            color: #666;
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
         }
-        .menu-item span {
-            color: #27ae60;
+        h3 {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 2em;
+            font-weight: bold;
+            color: #00008B; /* Dark Blue color */
+        }
+        .item {
+            margin: 20px 0;
+        }
+        .sub-item {
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        .footer {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Ementa do Chávena D'Ouro</h1>
-    </header>
     <div class="container">
-        <section id="entradas">
-            <h2>Entradas</h2>
-            <div class="menu-item">
-                <div>
-                    <h3>Sopa de Legumes</h3>
-                    <p>Deliciosa sopa feita com vegetais frescos</p>
-                </div>
-                <span>€3.50</span>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <h3>Salada Caprese</h3>
-                    <p>Tomate, mussarela de búfala, manjericão e azeite</p>
-                </div>
-                <span>€5.00</span>
-            </div>
-        </section>
-        <section id="pratos-principais">
-            <h2>Pratos Principais</h2>
-            <div class="menu-item">
-                <div>
-                    <h3>Frango à Brás</h3>
-                    <p>Frango desfiado com batata palha e ovos mexidos</p>
-                </div>
-                <span>€10.00</span>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <h3>Bacalhau à Lagareiro</h3>
-                    <p>Bacalhau assado com batatas a murro e legumes</p>
-                </div>
-                <span>€12.50</span>
-            </div>
-        </section>
-        <section id="sobremesas">
-            <h2>Sobremesas</h2>
-            <div class="menu-item">
-                <div>
-                    <h3>Tiramisu</h3>
-                    <p>Clássico tiramisu italiano</p>
-                </div>
-                <span>€4.00</span>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <h3>Mousse de Chocolate</h3>
-                    <p>Mousse cremosa de chocolate negro</p>
-                </div>
-                <span>€3.50</span>
-            </div>
-        </section>
+        <div class="item">
+            <h1>FILETES DE PESCADA</h1>
+            <p class="sub-item">Filets de Poisson / Fish Fillets</p>
+        </div>
+        <div class="item">
+            <h1>COSTELETAS GRELHADAS</h1>
+            <p class="sub-item">Côtelette de porc / Pork Chop</p>
+        </div>
+        <div class="item">
+            <h1>FÊVERAS GRELHADAS</h1>
+            <p class="sub-item">Grillade de Porc / Pork Steak (Grilled leg)</p>
+        </div>
+        <div class="item">
+            <h1>ALHEIRA</h1>
+            <p class="sub-item">Saucisson fumé régionale / Regional sausage</p>
+        </div>
+        <div class="item">
+            <h1>BIFE À CASA</h1>
+            <p class="sub-item">Bifteck / Steak With Chips</p>
+        </div>
+        <div class="item">
+            <h1>BIFE DE PERU</h1>
+            <p class="sub-item">Steak De Dinde Grillé / Grilled Turkey steak</p>
+        </div>
+        <div class="item">
+            <h2>Prato + Sopa + 1 Bebida + 1 Pão</h2>
+            <p class="price">6,40€</p>
+        </div>
+        <div class="item">
+            <h1>BACALHAU À BRAGA</h1>
+            <p class="sub-item">Morue à la "Braga" / Salted Cod Braga's Style</p>
+        </div>
+        <div class="item">
+            <h2>Prato + Sopa + 1 Bebida + 1 Pão</h2>
+            <p class="price">8,90€</p>
+        </div>
+        <div class="footer">
+            <p>SOBREMESA - 1,50€</p>
+        </div>
     </div>
 </body>
 </html>
