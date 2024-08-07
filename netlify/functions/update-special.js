@@ -1,6 +1,9 @@
-exports.handler = async (event, context) => {
-    console.log('Received event:', event);
+const fs = require('fs');
+const path = require('path');
 
+const filePath = path.join(__dirname, '../../dailySpecial.json');
+
+exports.handler = async (event, context) => {
     if (event.httpMethod !== 'POST') {
         return {
             statusCode: 405,
@@ -9,7 +12,6 @@ exports.handler = async (event, context) => {
     }
 
     const data = JSON.parse(event.body);
-    console.log('Received data:', data);
 
     if (!data.dailySpecial) {
         return {
@@ -18,13 +20,9 @@ exports.handler = async (event, context) => {
         };
     }
 
-    // Logica para processar a especialidade do dia
-    console.log('Updating daily special to:', data.dailySpecial);
-
-    // Simulando a atualização do JSON
+    // Atualizar o arquivo JSON
     const updatedData = { dailySpecial: data.dailySpecial };
-
-    console.log('Updated data:', updatedData);
+    fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2));
 
     return {
         statusCode: 200,
