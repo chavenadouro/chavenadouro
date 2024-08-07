@@ -12,7 +12,7 @@ exports.handler = async function(event, context) {
     try {
         const data = JSON.parse(event.body);
         if (data.dailySpecial) {
-            const filePath = path.join(__dirname, 'daily-special.json');
+            const filePath = path.join(__dirname, '..', '..', 'daily-special.json');
             const jsonData = JSON.stringify({ dailySpecial: data.dailySpecial }, null, 2);
             fs.writeFileSync(filePath, jsonData);
             return {
