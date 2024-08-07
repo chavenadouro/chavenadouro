@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Especialidade do Dia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #8B0000;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #8B0000;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #660000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Editor de Especialidade do Dia</h1>
+        <input type="text" id="specialInput" placeholder="Nova Especialidade do Dia">
+        <button onclick="updateSpecial()">Atualizar</button>
+    </div>
+
+    <script>
+        function updateSpecial() {
+            const newSpecial = document.getElementById('specialInput').value;
+            if (newSpecial.trim() === "") {
+                alert("Por favor, insira uma especialidade.");
+                return;
+            }
+            const jsonData = { dailySpecial: newSpecial };
+
+            fetch('update-special.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert("Especialidade atualizada com sucesso!");
+            })
+            .catch(error => {
+                console.error('Erro ao atualizar a especialidade:', error);
+            });
+        }
+    </script>
+</body>
+</html>
