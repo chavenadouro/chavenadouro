@@ -1,4 +1,9 @@
 // netlify/functions/updateSpecial.js
+const fs = require('fs');
+const path = require('path');
+
+const filePath = path.join(__dirname, 'dailySpecial.json');
+
 exports.handler = async (event, context) => {
     if (event.httpMethod !== 'POST') {
         return {
@@ -16,9 +21,12 @@ exports.handler = async (event, context) => {
         };
     }
 
-    // Lógica para processar a especialidade do dia
+    // Atualizar o arquivo JSON
+    const updatedData = { dailySpecial: data.dailySpecial };
+    fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2));
+
     return {
         statusCode: 200,
-        body: JSON.stringify({ message: 'Especialidade atualizada com sucesso!' }),
+        body: JSON.stringify({ message: 'Especialidade atualizada com sucesso!', data: updatedData }),
     };
 };
