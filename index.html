@@ -158,7 +158,7 @@
         <div class="right">
             <div class="top-section">
                 <h2>ESPECIALIDADE DO DIA:</h2>
-                <h3>TRIPAS À MODA DO PORTO</h3>
+                <h3> id="dailySpecial">FRANGO ESTUFADO C/ ERVILHAS</h3>
                 <p>Outras especialidades incluídas no menu:</p>
             </div>
             <div class="specialties">
@@ -193,5 +193,16 @@
             </div>
         </div>
     </div>
+
+	    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('daily-special.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('dailySpecial').textContent = data.dailySpecial;
+                })
+                .catch(error => console.error('Erro ao carregar a especialidade do dia:', error));
+        });
+    </script>
 </body>
 </html>
