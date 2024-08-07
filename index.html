@@ -152,8 +152,11 @@
 
 	<div class="left">
             <h2>CHÁVENA D'OURO</h2>
-	    <p> 07/08/2024 </p>
         </div> 
+	 <div class="container">
+        <h1>Data de Hoje</h1>
+        <div id="currentDate" class="date"></div>
+    </div>
 
         <div class="right">
             <div class="top-section">
@@ -203,6 +206,15 @@
                 })
                 .catch(error => console.error('Erro ao carregar a especialidade do dia:', error));
         });
+    </script>
+	    <script>
+        function getCurrentDate() {
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            return today.toLocaleDateString('pt-PT', options);
+        }
+
+        document.getElementById('currentDate').textContent = getCurrentDate();
     </script>
 </body>
 </html>
