@@ -196,7 +196,7 @@
 
 	    <script>
         document.addEventListener("DOMContentLoaded", function() {
-            fetch('Shared_Data.json')
+            fetch('daily-special.json')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('dailySpecial').textContent = data.dailySpecial;
