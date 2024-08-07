@@ -138,6 +138,9 @@
                 margin: 0 auto; /* Center the images */
             }
         }
+	 .date {
+            font-size: 1.5em;
+        }
     </style>
 </head>
 <body>
@@ -152,16 +155,13 @@
 
 	<div class="left">
             <h2>CHÁVENA D'OURO</h2>
-        </div> 
-	 <div class="container">
         <h1>Data de Hoje</h1>
         <div id="currentDate" class="date"></div>
-    </div>
-
+        </div> 
         <div class="right">
             <div class="top-section">
                 <h2>ESPECIALIDADE DO DIA:</h2>
-                <h3 id="dailySpecial">FRANGO ESTUFADO C/ ERVILHAS</h3>
+                <h3 id="dailySpecial"></h3>
                 <p>Outras especialidades incluídas no menu:</p>
             </div>
             <div class="specialties">
@@ -208,10 +208,12 @@
         });
     </script>
 	    <script>
-        function getCurrentDate() {
+     function getCurrentDate() {
             const today = new Date();
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            return today.toLocaleDateString('pt-PT', options);
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+            const year = today.getFullYear();
+            return `${day}/${month}/${year}`;
         }
 
         document.getElementById('currentDate').textContent = getCurrentDate();
