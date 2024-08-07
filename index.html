@@ -95,6 +95,7 @@
             .container {
                 flex-direction: column;
                 align-items: center;
+		text-align: center;
             }
             .left, .right {
                 width: 100%;
@@ -108,19 +109,33 @@
         }
         @media (max-width: 480px) {
             .left h2 {
-                font-size: 1.5em;
+                font-size: 2em;
+		align-items: center;
+		text-align: center;
             }
             .left .price {
                 font-size: 2.5em;
+		align-items: center;
+		text-align: center;
             }
             .right .top-section h2 {
-                font-size: 1.2em;
+                font-size: 2em;
+		align-items: center;
+		text-align: center;
             }
             .right .top-section h3 {
-                font-size: 2em;
+                font-size: 1.5em;
+		align-items: center;
+		text-align: center;
             }
             .specialty {
                 width: 100%; /* One item per row */
+		align-items: center;
+		text-align: center;
+            }
+	    .specialty img {
+                width: 50%; /* Smaller images */
+                margin: 0 auto; /* Center the images */
             }
         }
     </style>
@@ -134,6 +149,12 @@
             <h2>1 PÃO</h2>
             <div class="price">6,40€</div>
         </div> -->
+
+	<div class="left">
+            <h2>CHÁVENA D'OURO</h2>
+	    <p> 07/08/2024 </p>
+        </div> 
+
         <div class="right">
             <div class="top-section">
                 <h2>ESPECIALIDADE DO DIA:</h2>
